@@ -1,13 +1,39 @@
-# dataloader-grinder
+# datacollector-grinder
 
-A Clojure library designed to ... well, that part is up to you.
+A simple load tester for [datacollector] (https://github.com/julson/datacollector) 
+that writes randomly generated event datausing Grinder.
+
+## Setup
+
+Install [leiningen] (https://github.com/technomancy/leiningen)
+
+Download the project
+
+```
+git clone git://github.com/julson/datacollector-grinder.git
+cd ./datacollector-grinder
+lein deps
+```
 
 ## Usage
 
-FIXME
+This uses [Grinder] (http://grinder.sourceforge.net/) to run a Clojure
+script for testing. Grinder allows for easy thread and agent creation for testing
+across multiple machines.
 
-## License
+While in the project directory, run:
 
-Copyright © 2013 FIXME
+```
+bin/grinder agent start
+bin/grinder console start
+```
 
-Distributed under the Eclipse Public License, the same as Clojure.
+From the Grinder console, navigate to the Script tab and set the working
+directory to `$PROJECT_HOME/grinder`.
+
+Right click on `working.properties` and click on the select properties button
+
+Click on the play button on the upper left-hand corner of the Grinder Console 
+to start the test
+
+
