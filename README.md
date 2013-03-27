@@ -1,7 +1,7 @@
 # datacollector-grinder
 
 A simple load tester for [datacollector] (https://github.com/julson/datacollector) 
-that writes randomly generated event datausing Grinder.
+that writes randomly generated event data using Grinder.
 
 ## Setup
 
